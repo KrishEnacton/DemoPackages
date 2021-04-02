@@ -5,6 +5,7 @@ import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/
 import Home from '../Screens/Home';
 import About from '../Screens/About';
 import GridView from '../Screens/GridView';
+import Bubble from '../Screens/Bubble';
 
 const Stack = createStackNavigator();
 
@@ -31,6 +32,13 @@ const MainNavigation = () => {
                 <Stack.Screen
                     name="GridView"
                     component={GridView}
+                    options={{
+                        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
+                    }}
+                />
+                <Stack.Screen
+                    name="Bubble"
+                    component={Bubble}
                     options={{
                         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
                     }}
