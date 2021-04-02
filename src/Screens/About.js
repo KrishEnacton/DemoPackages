@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { StyleSheet, Text, View, Button } from 'react-native'
 import {
     GoogleSignin,
@@ -12,24 +12,17 @@ const About = ({ navigation }) => {
 
         GoogleSignin.configure({});
     }, [])
+    const [info, setInfo] = useState({});
 
     const signIn = async () => {
         try {
             await GoogleSignin.hasPlayServices();
             const userInfo = await GoogleSignin.signIn();
             // this.setState({ userInfo });
+            setInfo(userInfo);
             console.log("UserInfo:", userInfo);
         } catch (error) {
             console.log("Error:", error);
-            if (error.code === statusCodes.SIGN_IN_CANCELLED) {
-                // user cancelled the login flow
-            } else if (error.code === statusCodes.IN_PROGRESS) {
-                // operation (e.g. sign in) is in progress already
-            } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
-                // play services not available or outdated
-            } else {
-                // some other error happened
-            }
         }
     };
 
@@ -38,7 +31,8 @@ const About = ({ navigation }) => {
             <Text>About Screen</Text>
             <Button title="Home" onPress={() => navigation.navigate("Home")} ></Button>
             <Button title="GoogleSignin" onPress={() => signIn()} ></Button>
-
+            <Text>Email : {info?.user?.email}</Text>
+            <Text>Name : {info?.user?.name}</Text>
         </View>
     )
 }
