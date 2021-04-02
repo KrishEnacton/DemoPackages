@@ -21,6 +21,7 @@ const Home = ({ navigation }) => {
         <View>
             <Text>Home Screen</Text>
             <Button title="About" onPress={() => navigation.navigate("About")} ></Button>
+            <Button title="GridView" onPress={() => navigation.navigate("GridView")} ></Button>
             <Formik
                 initialValues={{ email: '', password: '' }}
                 onSubmit={values => console.log(values)}

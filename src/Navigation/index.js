@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 import Home from '../Screens/Home';
 import About from '../Screens/About';
+import GridView from '../Screens/GridView';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,13 @@ const MainNavigation = () => {
                 <Stack.Screen
                     name="About"
                     component={About}
+                    options={{
+                        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
+                    }}
+                />
+                <Stack.Screen
+                    name="GridView"
+                    component={GridView}
                     options={{
                         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
                     }}
