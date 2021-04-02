@@ -6,6 +6,7 @@ import Home from '../Screens/Home';
 import About from '../Screens/About';
 import GridView from '../Screens/GridView';
 import Bubble from '../Screens/Bubble';
+import ModalizeLib from '../Screens/ModalizeLib';
 
 const Stack = createStackNavigator();
 
@@ -39,6 +40,13 @@ const MainNavigation = () => {
                 <Stack.Screen
                     name="Bubble"
                     component={Bubble}
+                    options={{
+                        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
+                    }}
+                />
+                <Stack.Screen
+                    name="ModalizeLib"
+                    component={ModalizeLib}
                     options={{
                         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
                     }}
