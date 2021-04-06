@@ -24,6 +24,8 @@ const Home = ({ navigation }) => {
             <Button title="GridView" onPress={() => navigation.navigate("GridView")} ></Button>
             <Button title="Bubble" onPress={() => navigation.navigate("Bubble")} ></Button>
             <Button title="ModalizeLib" onPress={() => navigation.navigate("ModalizeLib")} ></Button>
+            {/* <Button title="FoldView" onPress={() => navigation.navigate("FoldView")} ></Button> */}
+            <Button title="Row" onPress={() => navigation.navigate("Row")} ></Button>
             <Formik
                 initialValues={{ email: '', password: '' }}
                 onSubmit={values => console.log(values)}
