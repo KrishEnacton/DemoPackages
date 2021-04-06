@@ -54,7 +54,7 @@ const Bubble = () => {
                 // renderSectionTitle={_renderSectionTitle}
                 renderHeader={_renderHeader}
                 renderContent={_renderContent}
-                expandMultiple={true}
+                // expandMultiple={true}
                 onChange={_updateSections}
             />
         </View>
