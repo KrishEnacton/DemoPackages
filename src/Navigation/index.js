@@ -13,6 +13,7 @@ import HeroExmaple from '../Screens/HeroExmaple';
 import AwesomeBtn from '../Screens/AwesomeBtn';
 import TextMask from '../Screens/TextMask';
 import AlertDropdown from '../Screens/AlertDropdown';
+import Swipeout from '../Screens/Swipeout';
 
 const Stack = createStackNavigator();
 
@@ -95,6 +96,13 @@ const MainNavigation = () => {
                 <Stack.Screen
                     name="AlertDropdown"
                     component={AlertDropdown}
+                    options={{
+                        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
+                    }}
+                />
+                <Stack.Screen
+                    name="Swipeout"
+                    component={Swipeout}
                     options={{
                         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
                     }}
