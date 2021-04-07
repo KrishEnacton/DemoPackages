@@ -29,6 +29,7 @@ const Home = ({ navigation }) => {
             <Button title="HeroExample" onPress={() => navigation.navigate("HeroExample")} ></Button>
             <Button title="AwesomeBtn" onPress={() => navigation.navigate("AwesomeBtn")} ></Button>
             <Button title="TextMask" onPress={() => navigation.navigate("TextMask")} ></Button>
+            <Button title="AlertDropdown" onPress={() => navigation.navigate("AlertDropdown")} ></Button>
             <Formik
                 initialValues={{ email: '', password: '' }}
                 onSubmit={values => console.log(values)}

@@ -12,6 +12,7 @@ import Row from '../Screens/Row';
 import HeroExmaple from '../Screens/HeroExmaple';
 import AwesomeBtn from '../Screens/AwesomeBtn';
 import TextMask from '../Screens/TextMask';
+import AlertDropdown from '../Screens/AlertDropdown';
 
 const Stack = createStackNavigator();
 
@@ -87,6 +88,13 @@ const MainNavigation = () => {
                 <Stack.Screen
                     name="TextMask"
                     component={TextMask}
+                    options={{
+                        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
+                    }}
+                />
+                <Stack.Screen
+                    name="AlertDropdown"
+                    component={AlertDropdown}
                     options={{
                         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
                     }}
