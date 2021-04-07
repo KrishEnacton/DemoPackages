@@ -9,6 +9,9 @@ import Bubble from '../Screens/Bubble';
 import ModalizeLib from '../Screens/ModalizeLib';
 // import FoldView from '../Screens/FoldView';
 import Row from '../Screens/Row';
+import HeroExmaple from '../Screens/HeroExmaple';
+import AwesomeBtn from '../Screens/AwesomeBtn';
+import TextMask from '../Screens/TextMask';
 
 const Stack = createStackNavigator();
 
@@ -63,6 +66,27 @@ const MainNavigation = () => {
                 <Stack.Screen
                     name="Row"
                     component={Row}
+                    options={{
+                        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
+                    }}
+                />
+                <Stack.Screen
+                    name="HeroExample"
+                    component={HeroExmaple}
+                    options={{
+                        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
+                    }}
+                />
+                <Stack.Screen
+                    name="AwesomeBtn"
+                    component={AwesomeBtn}
+                    options={{
+                        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
+                    }}
+                />
+                <Stack.Screen
+                    name="TextMask"
+                    component={TextMask}
                     options={{
                         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
                     }}
