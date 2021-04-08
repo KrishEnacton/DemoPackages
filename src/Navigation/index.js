@@ -14,6 +14,7 @@ import AwesomeBtn from '../Screens/AwesomeBtn';
 import TextMask from '../Screens/TextMask';
 import AlertDropdown from '../Screens/AlertDropdown';
 import Swipeout from '../Screens/Swipeout';
+import AppIntro from '../Screens/AppIntro/AppIntro';
 
 const Stack = createStackNavigator();
 
@@ -58,13 +59,6 @@ const MainNavigation = () => {
                         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
                     }}
                 />
-                {/* <Stack.Screen
-                    name="FoldView"
-                    component={FoldView}
-                    options={{
-                        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
-                    }}
-                /> */}
                 <Stack.Screen
                     name="Row"
                     component={Row}
@@ -103,6 +97,13 @@ const MainNavigation = () => {
                 <Stack.Screen
                     name="Swipeout"
                     component={Swipeout}
+                    options={{
+                        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
+                    }}
+                />
+                <Stack.Screen
+                    name="AppIntro"
+                    component={AppIntro}
                     options={{
                         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS
                     }}

@@ -27,7 +27,7 @@ const AlertDropdown = () => {
                 <Text>Hello</Text>
             </TouchableOpacity>
             <View style={{ height: 300 }} ></View>
-            <Button style={styles.btnStyle} title="Alert Info" onPress={showIAlert} />
+            <Button title="Alert Info" onPress={showIAlert} />
             <Button title="Alert Success" onPress={showSAlert} />
             <Button title="Alert Error" onPress={showEAlert} />
             <DropdownAlert zIndex={0} ref={dropDownAlertRef} />
